@@ -1,0 +1,51 @@
+@mixin button($color: $COLOR-GREEN) {
+  height: 24px;
+  min-width: 24px;
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  color: $COLOR-BLACK;
+
+  & i {
+    font-size: 18px;
+  }
+
+  &:active, &.active {
+    color: $color;
+  }
+
+  &:hover {
+    background: $BACKGROUND-COLOR;
+    cursor: pointer;
+  }
+}
+
+@mixin clear-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin position-absolute($top: 0) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: $top;
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-space-between() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+}
