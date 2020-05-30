@@ -20,6 +20,7 @@
     border: 1px solid $BORDER-COLOR;
     background: $BACKGROUND-COLOR;
     min-width: $INFO-CELL-WIDTH;
+    color: $COLOR-BLACK;
     height: 100%;    
     border-top: none;
   }
@@ -34,6 +35,7 @@
     background: $BACKGROUND-COLOR;
     border: 1px solid $BORDER-COLOR;
     width: $CELL-WIDTH; 
+    color: $COLOR-BLACK;
     min-width: 40px;       
     border-top: 0;
     border-left: 0;
@@ -44,6 +46,7 @@
     border: 1px solid $BORDER-COLOR;
     color: $COLOR-BLACK;
     width: $CELL-WIDTH;
+    color: $COLOR-BLACK;
     min-width: 40px;
     padding: 5px;    
     height: 100%;    
