@@ -21,6 +21,7 @@
     background: $BACKGROUND-COLOR;
     min-width: $INFO-CELL-WIDTH;
     color: $COLOR-BLACK;
+    position: relative;
     height: 100%;    
     border-top: none;
   }
@@ -36,6 +37,7 @@
     border: 1px solid $BORDER-COLOR;
     width: $CELL-WIDTH; 
     color: $COLOR-BLACK;
+    position: relative;
     min-width: 40px;       
     border-top: 0;
     border-left: 0;
@@ -46,7 +48,6 @@
     border: 1px solid $BORDER-COLOR;
     color: $COLOR-BLACK;
     width: $CELL-WIDTH;
-    color: $COLOR-BLACK;
     min-width: 40px;
     padding: 5px;    
     height: 100%;    
@@ -59,6 +60,37 @@
       outline: 2px solid $COLOR-BLUE;
       border: none;      
       z-index: 2;
+    }
+  }
+
+  .column-resize, .row-resize {
+    background: $COLOR-BLACK;
+    position: absolute;
+    bottom: 0;
+    right: 0;    
+    opacity: 0;
+    z-index: 1000;
+
+    &:hover {
+      opacity: 1 !important; 
+    }
+  }
+
+  .column-resize {   
+    top:  0;
+    width: 2px;
+
+    &:hover {
+      cursor: col-resize;
+    }
+  }
+
+  .row-resize {
+    left: 0;
+    height: 2px;
+
+    &:hover {
+      cursor: row-resize;
     }
   }
 }

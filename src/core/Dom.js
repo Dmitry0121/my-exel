@@ -5,6 +5,21 @@ class Dom {
             selector
   }
 
+  get data() {
+    return this.$element.dataset
+  }
+
+  css(styles = {}) {
+    Object.keys(styles)
+        .forEach((property) =>
+          this.$element.style[property] = styles[property]
+        )
+  }
+
+  findAll(selector) {
+    return this.$element.querySelectorAll(selector)
+  }
+
   html(html) {
     if (typeof html === 'string') {
       this.$element.innerHTML = html
@@ -30,6 +45,14 @@ class Dom {
     return this
   }
 
+  getClosestParent(selector) {
+    return $(this.$element.closest(selector))
+  }
+
+  getСordinates() {
+    return this.$element.getBoundingClientRect()
+  }
+
   on(event, callback) {
     this.$element.addEventListener(event, callback)
   }
@@ -50,3 +73,14 @@ $.create = (tagName, classes = '') => {
   }
   return $(element)
 }
+
+/*
+// decryption
+
+1. old functionality
+    for (const property in styles) {
+      if(styles.hasOwnProperty(property)) {
+        this.$element.style[property] = styles[property]
+      }
+    }
+*/
